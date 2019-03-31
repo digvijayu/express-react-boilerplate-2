@@ -26,4 +26,4 @@ describe('should test application', () => {
     ReactDOM.render(<App source="test" />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-})
+});

@@ -22,7 +22,9 @@ test('should render itself if no match was found from en.json', () => {
   const text = mount(
     providers(<Text>this.text.does.not.exist.in.en.json</Text>)
   );
-  expect(text.find('Text').text()).toEqual('this.text.does.not.exist.in.en.json');
+  expect(text.find('Text').text()).toEqual(
+    'this.text.does.not.exist.in.en.json'
+  );
 });
 
 test('should render itself with replaced param if no match was found from en.json', () => {
@@ -33,5 +35,7 @@ test('should render itself with replaced param if no match was found from en.jso
       </Text>
     )
   );
-  expect(text.find('Text').text()).toEqual('this.text.does.not.exist.in.en.json');
+  expect(text.find('Text').text()).toEqual(
+    'this.text.does.not.exist.in.en.json'
+  );
 });
