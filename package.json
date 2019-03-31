@@ -70,7 +70,9 @@
     "build-dev": "nodemon node scripts/build-dev.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "format": "prettier es5 --single-quote --write '{client,config,public,scripts,server}/**/*.js'"
+    "format": "prettier es5 --single-quote --write '{client,config,public,scripts,server}/**/*.js'",
+    "cy-open": "cypress open",
+    "cy-run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -132,6 +134,13 @@
     ]
   },
   "nodemonConfig": {
-    "ignore": ["build/*", "dist/*"]
+    "ignore": [
+      "build/*",
+      "dist/*",
+      "cypress/*"
+    ]
+  },
+  "devDependencies": {
+    "cypress": "^3.2.0"
   }
 }
