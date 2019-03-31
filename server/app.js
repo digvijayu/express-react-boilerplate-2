@@ -33,7 +33,7 @@ app.use(
   })
 );
 
-app.use(express.static(CONST.PUBLIC_FOLDER_NAME));
+app.use(express.static(process.env.BUILD_DIR));
 app.get('/', homeController.index);
 app.get('/api', apiController.index);
 
